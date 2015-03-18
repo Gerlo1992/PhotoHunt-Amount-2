@@ -14,7 +14,7 @@ exports.onUpgrade = !->
 	if 0 < Db.shared.get('next') < Plugin.time()
 		newHunt()
 
-exports.client_newHunt = exports.newHunt = newHunt = (amount = 1, cb = false) !->
+exports.client_newHunt = exports.newHunt = newHunt = (amount = 2, cb = false) !->
 	return if Db.shared.get('next') is -1
 		# used to disable my plugins and master instances
 
